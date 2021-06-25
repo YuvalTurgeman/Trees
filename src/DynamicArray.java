@@ -1,4 +1,3 @@
-import java.util.Iterator;
 
 public class DynamicArray<T> implements List<T> {
     // -------------------- constants --------------------
@@ -162,9 +161,11 @@ public class DynamicArray<T> implements List<T> {
         return found;
     }
 
-//    Returns an iterator over elements of type T
+    @Override
     public Iterator<T> iterator() {
-        return new DynamicArrayIterator<>(this).get();
+        return new DynamicArrayIterator<T>(this);
     }
 
+//  Returns an iterator over elements of type T
+    
 }

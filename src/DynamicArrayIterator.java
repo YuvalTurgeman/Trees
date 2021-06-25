@@ -1,4 +1,3 @@
-import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class DynamicArrayIterator<T> implements Iterator<T> {
@@ -14,12 +13,6 @@ public class DynamicArrayIterator<T> implements Iterator<T> {
         this.array = array;
         this.index = index;
     }
-
-    //////////////////////
-    public Iterator<T> get(){
-        return this;
-    }
-    ////////////////////////
 
     public boolean hasNext() {
         return index < array.size();
